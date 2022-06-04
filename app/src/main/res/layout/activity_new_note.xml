@@ -1,26 +1,216 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/note_coordinator"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewNote"
     android:orientation="vertical"
-    android:layout_margin="10dp"
-    >
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolbar"
+    tools:context=".NewNote">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:navigationIcon="@drawable/ic_arrow"
+        android:background="@color/white"
+        >
 
-        />
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/ic_arrow"
+            app:navigationIconTint="@color/black"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:titleTextColor="@color/black"
+            app:title="@string/note"
+            android:background="@color/white"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
 
-    <com.google.android.material.textfield.TextInputEditText
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="top"
-        android:inputType=""
-        />
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:background="@color/white"
+    >
 
-</LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:longClickable="true"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/oooooo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle"
+                android:hint="@string/title"
+                android:textAppearance="?attr/textAppearanceSubtitle1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18ssp"
+                android:fontFamily="@font/poppins_medium"
+
+                />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/note_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle"
+                android:hint="@string/write"
+                android:textAppearance="?attr/textAppearanceSubtitle1"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:fontFamily="@font/poppins_regular"
+
+                />
+
+            <View
+                android:id="@+id/white_space"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/horizontal_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/white"
+        android:layout_gravity="bottom"
+        >
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/checkBox_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:elevation="1dp"
+            android:background="@null"
+            android:backgroundTint="@color/fui_transparent"
+            android:elevation="0dp"
+            android:outlineProvider="none"
+            android:src="@drawable/ic_check_box"
+            app:fabSize="mini"
+            app:layout_constraintEnd_toStartOf="@+id/image_btn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:tint="#E0E0E0"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/image_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:elevation="1dp"
+            android:background="@null"
+            android:backgroundTint="@color/fui_transparent"
+            android:elevation="0dp"
+            android:outlineProvider="none"
+            android:src="@drawable/ic_image"
+            app:fabSize="mini"
+            app:layout_constraintEnd_toStartOf="@+id/camera_btn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/checkBox_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:tint="#E0E0E0"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/camera_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/fui_transparent"
+            android:elevation="0dp"
+            android:outlineProvider="none"
+            android:src="@drawable/ic_camera"
+            app:elevation="0dp"
+            app:fabSize="mini"
+            app:layout_constraintEnd_toStartOf="@+id/record_btn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/image_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:tint="#E0E0E0"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/record_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:backgroundTint="@color/fui_transparent"
+            android:elevation="0dp"
+            android:outlineProvider="none"
+            android:src="@drawable/ic_mic"
+            app:elevation="0dp"
+            app:fabSize="mini"
+            app:layout_constraintEnd_toStartOf="@+id/numbers_btn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/camera_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:tint="#E0E0E0"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/numbers_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:backgroundTint="@color/fui_transparent"
+            android:elevation="0dp"
+            android:src="@drawable/ic__list_numbered_24"
+            app:elevation="0dp"
+            app:fabSize="mini"
+            app:layout_constraintEnd_toStartOf="@+id/dots_btn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/record_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:tint="#F2F2F2"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/dots_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:backgroundTint="@color/fui_transparent"
+            android:elevation="0dp"
+            android:src="@drawable/ic_dots_list_24"
+            app:elevation="0dp"
+            app:fabSize="mini"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/numbers_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:tint="#F2F2F2"
+            />
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#F2F2F2"
+    app:layout_constraintTop_toTopOf="parent"
+    />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

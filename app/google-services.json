@@ -2,7 +2,8 @@
   "project_info": {
     "project_number": "981502924588",
     "project_id": "note-app-e1c0e",
-    "storage_bucket": "note-app-e1c0e.appspot.com"
+    "storage_bucket": "note-app-e1c0e.appspot.com",
+    "firebase_url":"https://note-app-e1c0e-default-rtdb.europe-west1.firebasedatabase.app/"
   },
   "client": [
     {

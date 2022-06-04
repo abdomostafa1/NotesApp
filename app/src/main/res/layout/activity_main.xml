@@ -1,32 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainCoordinator"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:layout_margin="10dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:fitsSystemWindows="true"
+    android:background="#F2F2F2"
+    android:transitionName="shared_element_container"
     >
-    <RelativeLayout
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/empty_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-    >
-        <ListView
-            android:id="@+id/list_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+        android:visibility="visible"
+        >
 
-        />
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/_64sdp"
+            android:layout_height="@dimen/_64sdp"
+            android:src="@drawable/icon8_note"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/no_notes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_margin="10dp"
-            android:src="@drawable/ic_add"
-            />
-    </RelativeLayout>
+            android:text="@string/no_notes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            android:textSize="@dimen/_16ssp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_medium"
 
-</LinearLayout>
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/click"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/no_notes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:maxLines="2"
+            android:textSize="@dimen/_12ssp"
+            android:gravity="center"
+            android:textStyle="italic"
+
+            android:fontFamily="@font/poppins_regular"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants"
+                android:layoutAnimation="@anim/layout_animation_fast_fall_down"
+                android:paddingBottom="@dimen/_100sdp"
+                android:paddingTop="@dimen/_16sdp"
+                android:clipToPadding="false"
+                android:visibility="gone"
+                />
+
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:fabAlignmentMode="end"
+        android:backgroundTint="@color/white"
+        app:navigationIcon="@drawable/ic_navigation"
+        app:menu="@menu/main_activity"
+        app:hideOnScroll="true"
+
+        />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add_circle"
+        app:layout_anchor="@id/bottom_app_bar"
+        android:tint="@color/white"
+        app:tint="@color/white"
+        app:fabSize="mini"
+        />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="RecordTheme" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/fui_transparent</item>
+        <item name="colorAccent">@color/red</item>
+        <item name="colorSecondary">@color/white</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/fui_transparent</item>
+        <item name="colorPrimary">#D50000</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="colorContainer">@color/white</item>
+        <item name="colorOnPrimaryContainer">@color/white</item>
+    </style>
+
+    <style name="MainActivityTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="snackbarStyle">@style/Base.Widget.Material3.Snackbar</item>
+        <item name="snackbarTextViewStyle">@style/Widget.Material3.Snackbar.TextView</item>
+        <item name="popupMenuStyle">@style/PopupMenuOverlapAnchor</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_close</item>
+        <item name="actionModeStyle">@style/ActionModeStyle</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="colorControlNormal">@color/gray</item>
+        <item name="colorSecondary">#3443AA</item>
+        <item name="colorOnSurface">#3443AA</item>
+
+    </style>
+
+
+    <style name="searchActivityTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="snackbarStyle">@style/Base.Widget.Material3.Snackbar</item>
+        <item name="snackbarTextViewStyle">@style/Widget.Material3.Snackbar.TextView</item>
+        <item name="colorPrimaryDark">#FFFFFF</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorOnSurface">@color/purple_500</item>
+        <item name="colorSecondary">@color/purple_500</item>
+    </style>
+
+    <style name="splashScreenTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+
+    </style>
+
+
+</resources>

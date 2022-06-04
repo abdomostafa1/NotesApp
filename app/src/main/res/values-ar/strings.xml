@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ملاحظات</string>
+    <string name="save">حفظ</string>
+    <string name="cancel">إلغاء</string>
+    <string name="sort_by">ترتيب حسب</string>
+    <string name="date_created_new">تاريخ الإنشاء  (٩-١)</string>
+    <string name="date_created_old">تاريخ الإنشاء  (١-٩)</string>
+    <string name="name_A_Z">العنوان (أ-ي)</string>
+    <string name="name_Z_A">العنوان (ي-أ)</string>
+    <string name="delete">حذف</string>
+    <string name="search">بحث</string>
+
+    <string name="select">تحديد</string>
+    <string name="selected">تحديد</string>
+    <string name="title">العنوان</string>
+    <string name="write">اكتب</string>
+    <string name="note">ملاحظة</string>
+    <string name="dialogTitleForImage">حذف الصورة</string>
+    <string name="dialogMessageForImage">سيتم حذف هذه الصورة نهائياً</string>
+    <string name="Audio_is_deleted">تم حذف الصوت</string>
+    <string name="failed_delete_Audio">فشل حذ االصوت</string>
+    <string name="search_for_note">ابحث عن ملاحظة</string>
+    <string name="type_into_box">اكتب داخل صندوق البحث \n لتري الملاحظة</string>
+    <string name="note_is_deleted">تم الحذف</string>
+    <string name="note_are_deleted">تم الحذف</string>
+    <string name="no_notes">لا يوجد ملاحظات</string>
+    <string name="click">اضغط + لبدء ملاحظة\nأيضًا سجل صوت والتقط صور</string>
+
+
+
+</resources>

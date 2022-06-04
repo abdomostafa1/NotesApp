@@ -1,3 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">notes</string>
+    <string name="key" translatable="false">key</string>
+    <string name="uri" translatable="false">uri</string>
+    <string name="path" translatable="false">path</string>
+    <string name="start" translatable="false">start</string>
+    <string name="dialogTitleForImage">Delete image?</string>
+    <string name="dialogMessageForImage">this image will be deleted forever</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="location" translatable="false">location</string>
+    <string name="Audio_is_deleted">Audio is deleted</string>
+    <string name="failed_delete_Audio">Failed to delete Audio</string>
+    <string name="search">Search</string>
+    <string name="sort_by">Sort by</string>
+    <string name="date_created_new">Date Created (9-1)</string>
+    <string name="date_created_old">Date Created (1-9)</string>
+    <string name="name_A_Z">Name (A-Z)</string>
+    <string name="name_Z_A">Name (Z-A)</string>
+
+    <string name="delete">Delete</string>
+    <string name="select">Select</string>
+    <string name="selected">Selected</string>
+    <string name="title">Title</string>
+    <string name="write">write down</string>
+    <string name="note">note</string>
+    <string name="search_for_note">Search for Note</string>
+    <string name="type_into_box">Type  into text box \n to get note</string>
+    <string name="note_is_deleted">Note is deleted successfully</string>
+    <string name="note_are_deleted">Notes are deleted</string>
+    <string name="no_notes">No notes </string>
+    <string name="click">Press + to start note \n also record and take photos</string>
+
 </resources>

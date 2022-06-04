@@ -13,4 +13,176 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="onImageClickTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="android:windowBackground">@color/black</item>
+    </style>
+
+    <style name="splashScreenTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="android:navigationBarColor">@color/white</item>
+
+    </style>
+    <style name="RecordTheme"  parent="Theme.Material3.Light.NoActionBar">
+        //Theme.Material3.Light.NoActionBar
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/fui_transparent</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+    <style name="ActionModeStyle" parent="@style/Widget.AppCompat.ActionMode">
+        <item name="background">@color/white</item>
+        <item name="titleTextStyle">@style/ActionModeTitleTextStyle</item>
+        <item name="elevation">@dimen/_2sdp</item>
+        <item name="android:elevation">@dimen/_2sdp</item>
+
+    </style>
+
+    <style name="ActionModeTitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionMode.Title">
+        <item name="android:textColor">@color/black</item>
+        <item name="textBackground">@color/fui_transparent</item>
+    </style>
+    <style name="roundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+    <style name="MainActivityTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="snackbarStyle">@style/Base.Widget.Material3.Snackbar</item>
+        <item name="snackbarTextViewStyle">@style/Widget.Material3.Snackbar.TextView</item>
+        <item name="popupMenuStyle">@style/PopupMenuOverlapAnchor</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_close</item>
+        <item name="actionModeStyle">@style/ActionModeStyle</item>
+        <item name="android:textColorSecondary">@color/black</item>
+        <item name="statusBarBackground">#F2E7FE</item>
+        <item name="colorControlNormal">@color/gray</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorPrimaryDark">#E8E8E8</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.App.BottomSheetDialog</item>
+        <item name="colorSecondary">#3443AA</item>
+        <item name="colorOnSurface">#3443AA</item>
+
+    </style>
+    <style name="ThemeOverlay.App.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/ModalBottomSheetDialog</item>
+    </style>
+    <style name="ModalBottomSheetDialog" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="backgroundTint">#E8E8E8</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.App.LargeComponent</item>
+    </style>
+
+    <style name="ShapeAppearance.App.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">44dp</item>
+    </style>
+    
+    <style name="newNoteTheme" parent="Theme.Material3.Light.NoActionBar">
+
+        <item name="snackbarStyle">@style/Base.Widget.Material3.Snackbar</item>
+        <item name="snackbarTextViewStyle">@style/Widget.Material3.Snackbar.TextView</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_close</item>
+        <item name="actionModeStyle">@style/ActionModeStyle</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:textColorSecondary">@color/black</item>
+        <item name="popupMenuBackground">@color/white</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="android:textColor">@color/black</item>
+
+        <item name="colorPrimaryDark">#F2E7FE</item>
+        <item name="buttonTint">@color/gray</item>
+        <item name="colorOnSurface">@color/black</item>
+        <item name="colorSecondary">@color/gray</item>
+
+    </style>
+    <style name="Base.Widget.Material3.Snackbar" parent="Base.Widget.MaterialComponents.Snackbar">
+        <item name="enforceMaterialTheme">true</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Material3.Snackbar</item>
+        <item name="backgroundTint">@color/black</item>
+        <item name="alpha">0.5</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="actionTextColorAlpha">@dimen/m3_snackbar_action_text_color_alpha</item>
+    </style>
+    <style name="Widget.Material3.Snackbar.TextView" parent="Widget.MaterialComponents.Snackbar.TextView">
+        <item name="android:alpha">0.5</item>
+        <item name="android:textAppearance">?attr/textAppearanceBodyMedium</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="backgroundColor">?attr/colorOnSurface</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="backgroundTint">?attr/colorSurface</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextAppearance.App.CollapsingToolbar.Expanded" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="TextAppearance.App.CollapsingToolbar.Collapsed" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+    <style name="searchActivityTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="snackbarStyle">@style/Base.Widget.Material3.Snackbar</item>
+        <item name="snackbarTextViewStyle">@style/Widget.Material3.Snackbar.TextView</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+    </style>
+    <style name="MyDenseOutlined" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+        <item name="materialThemeOverlay">@style/MyThemeOverlayOutlinedDense</item>
+
+    </style>
+
+    <style name="MyThemeOverlayOutlinedDense">
+        <item name="editTextStyle">@style/MyTextInputEditText_outlinedBox_dense_h
+        </item>
+    </style>
+
+    <style name="MyTextInputEditText_outlinedBox_dense_h" parent="@style/Widget.MaterialComponents.TextInputEditText.FilledBox.Dense">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+    <style name="MyToolbarStyle">
+        <item name="android:maxHeight">@dimen/abc_action_bar_default_height_material</item>
+        <item name="android:background">@color/purple_500</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="titleTextAppearance">@style/ThemeOverlay.Material3.Toolbar.Surface</item>
+        <!-- No need for colorPrimary, colorPrimaryDark, colorAccent here
+             this should go to the AppTheme -->
+    </style>
+    <style name="ThreeDotsStyle" parent="Widget.AppCompat.ActionButton.Overflow">
+
+        <item name="tint">@color/gray</item>
+    </style>
+    <style name="Theme.AppCompat.Translucent" parent="Theme.AppCompat.NoActionBar">
+        <!--on below line we are setting background as transparent color-->
+        <item name="android:background">@android:color/transparent</item>
+        <!--on below line we are displaying the windowNotitle as true as we are not displaying our status bar-->
+        <item name="android:windowNoTitle">true</item>
+        <!--on below line we are setting our window background as transparent color-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--on below line we are setting color background cache hint as null-->
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <!--on below line we are adding a window translucent as true-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--on below line we are adding a window animationstyle-->
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+
+    </style>
+    <style name="PopupMenuOverlapAnchor" parent="@style/Theme.AppCompat.Light">
+        <item name="android:overlapAnchor">true</item>
+        <item name="android:dropDownVerticalOffset">0dp</item>
+        <item name="android:dropDownHorizontalOffset">0dp</item>
+        <item name="tint">@color/gray</item>
+    </style>
+    <style name="tryTheme" parent="Theme.Material3.Light.NoActionBar"/>
 </resources>

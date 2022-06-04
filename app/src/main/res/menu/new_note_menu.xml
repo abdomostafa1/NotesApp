@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    
-    >
-    <item
-        android:id="@+id/add_id"
-        android:title="TODO"
-        android:icon="@drawable/ic_check"
-        app:showAsAction="always"
-        ></item>
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item
         android:id="@+id/delete"
-        android:title="Delete"
-        app:showAsAction="never"
+        android:title="@string/delete"
+        app:showAsAction="never|withText"
+        android:icon="@drawable/ic_delete"
+        android:iconTint="@color/black"
+
+
         />
+    <item
+        android:id="@+id/select_view"
+        android:icon="@drawable/ic_check_box"
+        android:title="@string/select"
+        android:iconTint="@color/black"
+        app:showAsAction="never|withText"
+        />
+
+    <item
+        android:id="@+id/attach"
+        android:icon="@drawable/ic_attachment"
+        android:title="@string/select"
+        android:iconTint="@color/black"
+        app:showAsAction="always"
+        />
+
 </menu>

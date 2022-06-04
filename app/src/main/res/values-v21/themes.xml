@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="PopupMenuOverlapAnchor" parent="@style/Theme.AppCompat.Light">
+        <item name="android:overlapAnchor">true</item>
+        <item name="android:dropDownVerticalOffset">-4dp</item>
+        <item name="android:dropDownHorizontalOffset">4dp</item>
+    </style>
+
+    <style name="newNoteTheme" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="colorPrimary">@color/purple_700</item>
+        <item name="snackbarStyle">@style/Base.Widget.Material3.Snackbar</item>
+        <item name="snackbarTextViewStyle">@style/Widget.Material3.Snackbar.TextView</item>
+        <item name="popupMenuStyle">@style/PopupMenuOverlapAnchor</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_close</item>
+        <item name="actionModeStyle">@style/ActionModeStyle</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="colorOnSurface">@color/black</item>
+        <item name="colorSecondary">@color/purple_500</item>
+        <item name="popupMenuBackground">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="Widget.Material3.Snackbar.TextView" parent="Widget.MaterialComponents.Snackbar.TextView">
+        <item name="android:alpha">0.5</item>
+        <item name="android:textAppearance">?attr/textAppearanceBodyMedium</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="backgroundColor">?attr/colorOnSurface</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="backgroundTint">?attr/colorSurface</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MainActivityTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="snackbarStyle">@style/Base.Widget.Material3.Snackbar</item>
+        <item name="snackbarTextViewStyle">@style/Widget.Material3.Snackbar.TextView</item>
+        <item name="popupMenuStyle">@style/PopupMenuOverlapAnchor</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_close</item>
+        <item name="actionModeStyle">@style/ActionModeStyle</item>
+        <item name="android:textColorSecondary">@color/black</item>
+        <item name="statusBarBackground">#F2E7FE</item>
+        <item name="colorControlNormal">@color/gray</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorPrimaryDark">#E8E8E8</item>
+        <item name="colorSecondary">#3443AA</item>
+
+        <item name="colorOnSurface">#3443AA</item>
+
+    </style>
+    <style name="searchActivityTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <item name="snackbarStyle">@style/Base.Widget.Material3.Snackbar</item>
+    <item name="snackbarTextViewStyle">@style/Widget.Material3.Snackbar.TextView</item>
+    <item name="android:windowLightStatusBar">true</item>
+        <item name="colorPrimaryDark">#FFFFFF</item>
+
+    </style>
+
+
+
+    <style name="splashScreenTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="colorPrimaryDark">@color/white</item>
+
+        <item name="android:navigationBarColor">@color/white</item>
+
+    </style>
+
+    <style name="ActionModeStyle" parent="@style/Widget.AppCompat.ActionMode">
+        <item name="background">@color/white</item>
+        <item name="titleTextStyle">@style/ActionModeTitleTextStyle</item>
+        <item name="elevation">@dimen/_2sdp</item>
+        <item name="android:elevation">@dimen/_2sdp</item>
+
+    </style>
+
+</resources>
