@@ -1,6 +1,6 @@
 
 ## Notes app 📝
-- notes app helps  you to make notes to type something important ,make to-do list or save some good memories .
+- notes app helps  you to make to-do list , write something important or save some good memories .
 - app allows you to use mobile camera or pick photos from gallery to use them in your note 📷
 - app allows you to record your voice 🎙️
 
